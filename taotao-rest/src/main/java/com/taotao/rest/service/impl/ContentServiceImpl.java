@@ -16,7 +16,6 @@ public class ContentServiceImpl implements ContentService {
 	
 	@Autowired
 	private TbContentMapper tbContentMapper;
-
 	
 	@Override
 	public List<TbContent> getContentList(long contentCid) {
@@ -26,10 +25,7 @@ public class ContentServiceImpl implements ContentService {
 		Criteria criteria = example.createCriteria();
 		criteria.andCategoryIdEqualTo(contentCid);
 		List<TbContent> list =  tbContentMapper.selectByExample(example);
-
 		return list;
 	}
 	
-	
-
 }

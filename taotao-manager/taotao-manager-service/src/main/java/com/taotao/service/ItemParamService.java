@@ -5,8 +5,8 @@ import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.pojo.TbItemParam;
 /**
  * 商品对各参数模板管理
- * @author Administrator
- *
+ * @author wufenbin
+ * 2017年7月19日
  */
 public interface ItemParamService {
 	/**

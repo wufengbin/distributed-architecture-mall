@@ -18,7 +18,7 @@ import com.taotao.service.PictureService;
 public class PictureServiceImpl implements PictureService {
 
 	/**
-	 * 通过spring容器   从xml中取值  
+	 * 通过spring容器   从配置文件中取值  
 	 */
 	@Value("{FTP_ADDRESS}")
 	private String FTP_ADDRESS;

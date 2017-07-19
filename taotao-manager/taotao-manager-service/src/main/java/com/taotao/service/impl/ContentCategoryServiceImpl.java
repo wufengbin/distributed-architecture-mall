@@ -24,25 +24,24 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 	@Override
 	public List<EUTreeNode> getCategoryList(long parentId) {
 
+		List<EUTreeNode> resultList = new ArrayList<>();
+		
 		TbContentCategoryExample example = new TbContentCategoryExample();
 		Criteria criteria = example.createCriteria();
 		criteria.andParentIdEqualTo(parentId);
 		//执行查询
 		List<TbContentCategory> list = tbContentCategoryMapper.selectByExample(example);
 		
-		List<EUTreeNode> resultList = new ArrayList<>();
-	
 		for (TbContentCategory tbContentCategory : list) {
-			//创建一个节点
-			EUTreeNode euTreeNode = new EUTreeNode();
-			euTreeNode.setId(tbContentCategory.getId());
-			euTreeNode.setText(tbContentCategory.getName());
-			euTreeNode.setState(tbContentCategory.getIsParent()?"closed":"open");
+				//创建一个节点
+				EUTreeNode euTreeNode = new EUTreeNode();
+				euTreeNode.setId(tbContentCategory.getId());
+				euTreeNode.setText(tbContentCategory.getName());
+				euTreeNode.setState(tbContentCategory.getIsParent()?"closed":"open");
 			
-			resultList.add(euTreeNode);
+				resultList.add(euTreeNode);
 		}
 		
-		// TODO Auto-generated method stub
 		return resultList;
 	}
 
@@ -53,7 +52,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 		TbContentCategory contentCategory = new TbContentCategory();
 		contentCategory.setName(name);
 		contentCategory.setIsParent(false);
-		//'状态。可选值:1(正常),2(删除)',
+		//'状态 可选值:1(正常),2(删除)',
 		contentCategory.setStatus(1);
 		contentCategory.setParentId(parentId);
 		contentCategory.setSortOrder(1);
@@ -100,11 +99,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 		TbContentCategory tbContentCategory = new TbContentCategory();
 		tbContentCategory.setId(id);
 		tbContentCategory.setName(name);
-//		TbContentCategoryExample example = new TbContentCategoryExample();
-//		Criteria criteria =  example.createCriteria();
-//		criteria.
-		tbContentCategoryMapper.updateByPrimaryKeySelective(tbContentCategory);
-		
+		tbContentCategoryMapper.updateByPrimaryKeySelective(tbContentCategory);		
 		return TaotaoResult.ok();
 	}
 

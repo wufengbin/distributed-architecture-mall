@@ -1,8 +1,8 @@
 package com.taotao.service;
 /**
  * 商品规格参数展示
- * @author Administrator
- *
+ * @author wufenbin
+ * 2017年7月19日
  */
 public interface ItemParamItemService {
 	/**

@@ -1,7 +1,11 @@
 package com.taotao.common.pojo;
 
 import java.util.List;
-
+/**
+ * 自定义返回POJO
+ * @author wufenbin
+ * 2017年7月19日
+ */
 public class EUDataGridResult {
 
 	//总数量

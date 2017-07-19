@@ -1,8 +1,8 @@
 package com.taotao.common.pojo;
 /**
  * easyUI树形控件节点格式
- * @author Administrator
- *
+ * @author wufenbin
+ * 2017年7月19日
  */
 public class EUTreeNode {
 

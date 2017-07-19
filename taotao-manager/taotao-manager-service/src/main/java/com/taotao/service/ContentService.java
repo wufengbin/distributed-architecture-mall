@@ -1,15 +1,13 @@
 package com.taotao.service;
 
-import java.util.List;
-
 import com.taotao.common.pojo.EUDataGridResult;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.pojo.TbContent;
 
 /**
  * 内容管理service
- * @author Administrator
- *
+ * @author wufenbin
+ * 2017年7月19日
  */
 public interface ContentService {
 	

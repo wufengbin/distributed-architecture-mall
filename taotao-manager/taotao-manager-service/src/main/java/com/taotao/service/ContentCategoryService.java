@@ -3,25 +3,24 @@ package com.taotao.service;
 import java.util.List;
 
 import com.taotao.common.pojo.EUTreeNode;
+
 /**
- * 内容分类管理
- * @author Administrator
- *
+ * 内容分类管理service
  */
 import com.taotao.common.pojo.TaotaoResult;
 public interface ContentCategoryService {
 	
 	/**
 	 * 获取内容分类列表
-	 * @param parentId 父节点id
+	 * @param parentId 父结点id
 	 * @return
 	 */
 	List<EUTreeNode> getCategoryList(long parentId);
 	
 	/**
 	 * 添加内容分类
-	 * @param parentId 父节点id
-	 * @param name 名称
+	 * @param parentId 父结点id
+	 * @param name 分类名称
 	 * @return
 	 */
 	TaotaoResult insertContentCategory(long parentId,String name);

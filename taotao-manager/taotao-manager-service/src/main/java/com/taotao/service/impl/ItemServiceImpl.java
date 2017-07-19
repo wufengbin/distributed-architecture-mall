@@ -23,13 +23,9 @@ import com.taotao.pojo.TbItemParamItem;
 import com.taotao.service.ItemService;
 
 /**
- * 商品管理Service
- * <p>Title: ItemServiceImpl</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年9月2日上午10:47:14
- * @version 1.0
+ *  商品管理Service
+ * @author wufenbin
+ * 2017年7月19日
  */
 @Service
 public class ItemServiceImpl implements ItemService {

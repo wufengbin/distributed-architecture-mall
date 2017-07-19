@@ -18,9 +18,19 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-
+/**
+ * HttpClient工具类
+ * @author wufenbin
+ * 2017年7月19日
+ */
 public class HttpClientUtil {
 
+	/**
+	 * 发送GET请求
+	 * @param url 请求地址
+	 * @param param 参数
+	 * @return
+	 */
 	public static String doGet(String url, Map<String, String> param) {
 
 		// 创建Httpclient对象
@@ -66,6 +76,13 @@ public class HttpClientUtil {
 		return doGet(url, null);
 	}
 
+	
+	/**
+	 * 发送POST请求
+	 * @param url 请求地址
+	 * @param param 参数
+	 * @return
+	 */
 	public static String doPost(String url, Map<String, String> param) {
 		// 创建Httpclient对象
 		CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -101,10 +118,21 @@ public class HttpClientUtil {
 		return resultString;
 	}
 
+	/**
+	 * 无参数POST请求
+	 * @param url
+	 * @return
+	 */
 	public static String doPost(String url) {
 		return doPost(url, null);
 	}
 	
+	/**
+	 * POST请求 json格式参数
+	 * @param url
+	 * @param json
+	 * @return
+	 */
 	public static String doPostJson(String url, String json) {
 		// 创建Httpclient对象
 		CloseableHttpClient httpClient = HttpClients.createDefault();

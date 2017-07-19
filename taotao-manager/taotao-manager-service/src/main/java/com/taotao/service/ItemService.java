@@ -4,9 +4,9 @@ import com.taotao.common.pojo.EUDataGridResult;
 import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.pojo.TbItem;
 /**
- * 
- * @author Administrator
- *
+ * 商品对各参数模板管理
+ * @author wufenbin
+ * 2017年7月19日
  */
 public interface ItemService {
 
